@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+</head>
+
+<body>
+    
+    <div class="skrollr-body">
+        
+    <!-- The Title! -->
+    <div id="title" data-0="top:50px;-webkit-transform: rotate(2deg);" data-40="top:0px;opacity:1.0;-webkit-transform: rotate(-0.5deg);" data-440="top:50px;opacity:1.0;-webkit-transform: rotate(1.5deg);" data-540="top:50px;"><p>The Finest Tea Room in Essex</p><h2>{{ title }}</h2></div>
+    
+    <!-- Picture of Front of Shop! -->
+    <div id="welcomeToShop" data-0="-webkit-transform: rotate(-1deg);" data-40="-webkit-transform: rotate(0deg);" data-400="-webkit-transform: rotate(0deg);" data-440="-webkit-transform: rotate(1deg);"><p>Welcome to our shop!</p><div class="square"></div></div>
+    
+    <!-- Menu! -->
+    <div id="menu"><p>You can find our menu... Here!</p><div id="menuthing"><h3 style="float:left;"><a href="#">Eat in<br />Menu</a></h3><h3 style="float:right;"><a href="#">Takeaway<br />Menu</a></h3></div></div>
+    
+    <!-- Opening Times! -->
+    <div id="open"><p>We are {{ open }} today</p><div id="opentimes"><h3 style="float:left;">Mon - Fri<br />Open</h3><h3 style="float:right;">Sat & Sun<br />Closed</h3></div></div>
+        
+    <!-- Map to Shop -->
+    <div id="mapToShop" data-0="-webkit-transform: rotate(2deg);" data-140="-webkit-transform: rotate(0deg);" data-500="-webkit-transform: rotate(0deg);" data-540="-webkit-transform: rotate(-1deg);"><p>Find Us... Here!</p><div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d615.0918321519866!2d0.7022878859050637!3d51.92725310951215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8fc247b261c49%3A0x5b1ced1d5937ea3a!2sWhoop+Teea+Do!5e0!3m2!1sen!2suk!4v1405939153144" width="450" height="450" frameborder="0" style="border:0"></iframe></div></div>
+    
+    <!-- Welcome Message -->
+    <div id="welcomeMessage" data-0="-webkit-transform: rotate(1deg);" data-440="-webkit-transform: rotate(1deg);" data-640="-webkit-transform: rotate(-1deg);" data-700="-webkit-transform: rotate(0deg);" data-740="-webkit-transform: rotate(1deg);"><div class="square3"><h3>Welcome to {{ title }}</h3>{{ message }}</div></div>
+    
+    <!-- Picture Frame -->
+    <div id="kittedMugPictureFrame" data-200="-webkit-filter:blur(5px) grayscale(0.5);-webkit-transform:rotate(0deg);" data-250="-webkit-filter:blur(0px) grayscale(0);-webkit-transform:rotate(3deg);" data-750="-webkit-filter:blur(0px) grayscale(0);-webkit-transform:rotate(-3deg);" data-800="-webkit-filter:blur(5px) grayscale(0.5);-webkit-transform:rotate(0deg);"></div>
+    
+    <!-- Contact Us -->
+    <div id="contact" data-0="-webkit-transform: rotate(-1deg);" data-480="-webkit-transform: rotate(-1deg);" data-680="-webkit-transform: rotate(1deg);" data-740="-webkit-transform: rotate(0deg);" data-780="-webkit-transform: rotate(-1deg);"><p>If you want to contact us...</p><div id="contactinfo"><h3>{{ email }}<br />{{ telephone }}<br />{{ address }}<br />{{ postcode }}</h3></div></div>
+        
+    <!-- Menu -->
+        
+        
+        </div>
+    
+    <script src="javascripts/skrollr.min.js"></script>
+    <script type="text/javascript">
+	if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    skrollr.init({
+        forceHeight: false
+    });
+}   
+	</script>
+</body>
+</html>
