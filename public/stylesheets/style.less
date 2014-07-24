@@ -4,14 +4,18 @@
 }
 
 @-webkit-keyframes Spin {
-    0% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px); }
-    50% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px); }
-    100% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px); }
+    0% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px);opacity:1; }
+    30% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px);opacity:1; }
+    31% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px);opacity:0; }
+    69% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px);opacity:0; }
+    70% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px);opacity:1; }
+    100% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px);opacity:1; }
 }
 
 @-webkit-keyframes SpinInverse {
     0% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px); }
-    50% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px); }
+    30% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px); }
+    70% { -webkit-transform: rotateY(0deg) perspective(400px) translateZ(-1px); }
     100% { -webkit-transform: rotateY(180deg) perspective(400px) translateZ(1px); }
 }
 
@@ -42,7 +46,94 @@
 
 @media only screen 
 and (min-width : 1020px) {
+
+/* -- Menu Desktop --*/
+
+#share {
+    position:absolute;
+    top:1570px;
+    left:calc(~"50% - 500px");
+    padding-bottom:50px;
+}
     
+.EatInMenu {
+    position:fixed;
+    width:0px;
+    height:0px;
+    left:50%;
+    top:50%;
+    background: url('../images/linen2.png');
+    background-size: 100px 100px;
+    -webkit-border-radius:5px;
+    box-shadow: 0px 0px 5px #777;
+    overflow-y: scroll;
+    -webkit-transition: width 1s, height 1s, left 1s, top 1s;
+    z-index: 20;
+    -webkit-transform:translateZ(1000px);
+    -webkit-transform-style: preserve-3d;
+    font-family: Whoop-Teea-Doo;
+    font-size: 20px;
+    text-align:center; 
+    color:#666;
+}
+
+.EatInMenuVisable {
+    width:900px;
+    height:calc(~"100% - 200px");
+    top:100px;
+    left:calc(~"50% - 450px");
+}
+
+.EatInMenu h3 {
+    font-family: Whoop-Teea-Doo;
+    font-size: 60px;
+    text-align:center; 
+    color:#666;
+    margin-bottom:10px;
+    margin-top:15px;
+}
+
+.EatInMenu h4 {
+    font-family: Whoop-Teea-Doo;
+    font-size: 30px;
+    text-align:center; 
+    color:#666;
+    margin-bottom:10px;
+    margin-top:15px;
+}
+
+.EatInMenu p {
+    font-family: Whoop-Teea-Doo;
+    font-size: 24px;
+    text-align:center; 
+    color:#666;
+}
+
+.EatInMenu a {
+    color:#00CCCC;
+    text-decoration: none;
+}
+
+.closebutton {
+    position:fixed;
+    top:100px;
+    -webkit-transform:translateZ(1200px);
+    right:calc(~"50% - 450px");
+    height:50px;
+    width:50px;
+    -webkit-border-radius:25px;
+    text-align: center;
+    line-height: 50px;
+    opacity:0;
+    -webkit-transition:opacity 1s, display 1s;
+    -webkit-transition-delay: 1s;
+    cursor:  pointer;
+}
+
+.closebuttonVisible {
+    opacity:1;
+} 
+
 body {
     background:url('../images/Polkadots.png');
     background-size: 150px 150px; 
@@ -160,6 +251,7 @@ body {
     top:300px;
     -webkit-backface-visibility: hidden;
     -webkit-animation: Spin 5s infinite;
+    -webkit-animation-play-state:running;
 }
    
 #menu {
@@ -167,10 +259,18 @@ body {
     width:450px;
     right:calc(~"50% - 480px");
     top:300px;
-    z-index:5;
     -webkit-backface-visibility: hidden;
     -webkit-transform:rotateY(0deg);
     -webkit-animation: SpinInverse 5s infinite;
+    -webkit-animation-play-state:running;
+}
+    
+#menu:hover {
+    -webkit-animation-play-state:paused;
+}
+    
+#menu:hover ~ #open {
+    -webkit-animation-play-state:paused;
 }
     
 #menu p {
@@ -183,6 +283,7 @@ body {
     text-align:center;
     color: #888;
     top:100px;
+    margin-left: 10px;
     -webkit-transform:rotate(0deg);
 }
     
@@ -653,6 +754,94 @@ and (max-width : 1024px) {
     color: #888;
     margin-left: 30px;
     margin-right:30px;
+}
+    
+#share {
+    position:absolute;
+    left:calc(~"50% - 235px");
+    top:2760px;
+    padding-bottom:50px;
+}
+    
+/* -- Menu Mobile --*/
+
+.EatInMenu {
+    position:fixed;
+    width:0px;
+    height:0px;
+    left:50%;
+    top:50%;
+    background: url('../images/linen2.png');
+    background-size: 100px 100px;
+    -webkit-border-radius:5px;
+    box-shadow: 0px 0px 5px #777;
+    overflow-y: scroll;
+    -webkit-transition: width 1s, height 1s, left 1s, top 1s;
+    z-index: 20;
+    -webkit-transform:translateZ(1000px);
+    -webkit-transform-style: preserve-3d;
+    font-family: Whoop-Teea-Doo;
+    font-size: 20px;
+    text-align:center; 
+    color:#666;
+}
+
+.EatInMenuVisable {
+    width:450px;
+    height:calc(~"100% - 200px");
+    top:100px;
+    left:calc(~"50% - 225px");
+}
+
+.EatInMenu h3 {
+    font-family: Whoop-Teea-Doo;
+    font-size: 60px;
+    text-align:center; 
+    color:#666;
+    margin-bottom:10px;
+    margin-top:15px;
+}
+
+.EatInMenu h4 {
+    font-family: Whoop-Teea-Doo;
+    font-size: 30px;
+    text-align:center; 
+    color:#666;
+    margin-bottom:10px;
+    margin-top:15px;
+}
+
+.EatInMenu p {
+    font-family: Whoop-Teea-Doo;
+    font-size: 24px;
+    text-align:center; 
+    color:#666;
+}
+
+.EatInMenu a {
+    color:#00CCCC;
+    text-decoration: none;
+}
+
+.closebutton {
+    position:fixed;
+    top:100px;
+    -webkit-transform:translateZ(1200px);
+    right:calc(~"50% - 225px");
+    right:calc(~"50% - 225px");
+    height:50px;
+    width:50px;
+    -webkit-border-radius:25px;
+    text-align: center;
+    line-height: 50px;
+    opacity:0;
+    -webkit-transition:opacity 1s, display 1s;
+    -webkit-transition-delay: 1s;
+    cursor:  pointer;
+}
+
+.closebuttonVisible {
+    opacity:1;
 }
     
 

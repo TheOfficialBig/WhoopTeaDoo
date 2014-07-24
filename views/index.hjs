@@ -4,6 +4,9 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53d0df0558b48338"></script>
+
 </head>
 
 <body>
@@ -17,7 +20,7 @@
     <div id="welcomeToShop" data-0="-webkit-transform: rotate(-1deg);" data-40="-webkit-transform: rotate(0deg);" data-400="-webkit-transform: rotate(0deg);" data-440="-webkit-transform: rotate(1deg);"><p>Welcome to our shop!</p><div class="square"></div></div>
     
     <!-- Menu! -->
-    <div id="menu"><p>You can find our menu... Here!</p><div id="menuthing"><h3 style="float:left;"><a href="#">Eat in<br />Menu</a></h3><h3 style="float:right;"><a href="#">Takeaway<br />Menu</a></h3></div></div>
+    <div id="menu"><p>Try our new takeaway order service!</p><div id="menuthing"><h3 style="text-align:center;"><a class="EatInMenuOpen" href="javascript:;">Waiter, "I'd like to place a takeaway order please!"</a></h3></div></div>
     
     <!-- Opening Times! -->
     <div id="open"><p>We are {{ open }} today</p><div id="opentimes"><h3 style="float:left;">Mon - Fri<br />Open</h3><h3 style="float:right;">Sat & Sun<br />Closed</h3></div></div>
@@ -33,11 +36,175 @@
     
     <!-- Contact Us -->
     <div id="contact" data-0="-webkit-transform: rotate(-1deg);" data-480="-webkit-transform: rotate(-1deg);" data-680="-webkit-transform: rotate(1deg);" data-740="-webkit-transform: rotate(0deg);" data-780="-webkit-transform: rotate(-1deg);"><p>If you want to contact us...</p><div id="contactinfo"><h3>{{ email }}<br />{{ telephone }}<br />{{ address }}<br />{{ postcode }}</h3></div></div>
+    
+    <div class="closebutton">&times;</div>
         
-    <!-- Menu -->
+    <!-- EatInMenu -->
+    <div class="EatInMenu">
         
+    <!-- CUP OF TEA -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Tea</h3>
+	    <p><span class="item_price">£1.60</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- AMERICANO -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Americano</h3>
+	    <p><span class="item_price">£1.60</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- CAPPUCCINO -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Cappuccino</h3>
+	    <p><span class="item_price">£1.95</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- LATTE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Latte</h3>
+	    <p><span class="item_price">£2.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- HOT CHOCOLATE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Hot Chocolate</h3>
+	    <p><span class="item_price">£2.10</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- PEPSI MAX -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Pepsi Max</h3>
+	    <p><span class="item_price">£0.95</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        <p>-------------</p>
+        
+    <!-- SANDWICH CHEESE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Cheese and Chutney Sandwich</h3>
+        <p>Mature Cheddar Cheese and Premium Chutney</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- SANDWICH CHICKEN AND LEMON MAYO -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Chicken and Lemon Mayo Sandwich</h3>
+        <p>Free Range Sliced Chicken Breast with Lemon Mayo</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- SANDWICH TUNA AND SWEETCORN -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Tuna and Sweetcorn Sandwich</h3>
+        <p>Tuna with Sweetcorn and Mayonnaise</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div> 
+        
+    <!-- SANDWICH EGG 'N' CRESS -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Egg Mayonnaise and Cress Sandwich</h3>
+        <p>Free Range Egg Mayonnaise with Cress</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- SANDWICH CREAM CHEESE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Cream Cheese, Grape and Walnut Sandwich</h3>
+        <p>Cream Cheese, Grapes and Walnut Filling</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- SANDWICH HAM AND MUSTARD -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Ham and Mustard Sandwich</h3>
+        <p>Free Range Ham with Wholegrain Mustard</p>
+	    <p><span class="item_price">£4.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+        <p>-------------</p>
+    
+    <!-- QUICHE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Quiche</h3>
+	    <p><span class="item_price">£2.95</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- SNAUSAGE ROLL -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Sausage Roll</h3>
+	    <p><span class="item_price">£1.95</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div> 
+    
+    <!-- CHEESE SCONE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Cheese Scone</h3>
+	    <p><span class="item_price">£1.60</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- SOUP -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Soup</h3>
+	    <p><span class="item_price">£2.20</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- CRISPS -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Crisps</h3>
+	    <p><span class="item_price">£0.80</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- CAKE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Cake</h3>
+	    <p><span class="item_price">£2.25</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div>
+        
+    <!-- TRAYBAKE SLICE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Tray Bake Slice</h3>
+	    <p><span class="item_price">£2.00</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of these please!</a></p>
+	</div>
+        
+    <!-- FRUIT SCONE -->
+    <div class="simpleCart_shelfItem">
+	    <h3 class="item_name">Fruit Scone</h3>
+	    <p><span class="item_price">£1.60</span><br />
+		<a class="item_add" href="javascript:;">I'll have one of those please!</a></p>
+	</div> 
+        
+        <p>=============</p>
+        <h4>The Bill!</h4>
+        <div class="simpleCart_items"></div>
+        <p>-------------</p>
+        <div class="simpleCart_grandTotal"></div>
+        <p>=============</p>
+        <p><a href="javascript:;" class="simpleCart_checkout">I'm Ready to Order!</a></p>
         
         </div>
+        
+    </div>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div id="share" class="addthis_native_toolbox"></div>
     
     <script src="javascripts/skrollr.min.js"></script>
     <script type="text/javascript">
@@ -46,6 +213,96 @@
         forceHeight: false
     });
 }   
+	</script>
+    <script src="javascripts/jquery.js"></script>
+    
+    <script>
+    $(document).ready(function() {  
+        $(".EatInMenuOpen").click(function() {
+            $(".EatInMenu").toggleClass("EatInMenuVisable");
+            $(".closebutton").toggleClass("closebuttonVisible");
+        });
+        
+        $(".closebutton").click(function() {
+            $(".EatInMenu").toggleClass("EatInMenuVisable");
+            $(".closebutton").toggleClass("closebuttonVisible");
+        });
+    });
+    </script>
+    
+    <script src="javascripts/simpleCart.js"></script>
+    <script>
+  		simpleCart({
+	// array representing the format and columns of the cart,
+	// see the cart columns documentation
+	cartColumns: [
+		{ attr: "name", label: false},
+		{ attr: "quantity", label: false},
+		{ view: "currency", attr: "total", label:false },
+		{ view: "remove", text: " Remove", label: false}
+	],
+
+	// "div" or "table" - builds the cart as a 
+	// table or collection of divs
+	cartStyle: "div", 
+
+	// how simpleCart should checkout, see the 
+	// checkout reference for more info 
+	checkout: { 
+		type: "PayPal" , 
+		email: "bob@gmail.com"
+	},
+
+	// set the currency, see the currency 
+	// reference for more info
+	currency: "GBP",
+
+	// collection of arbitrary data you may want to store 
+	// with the cart, such as customer info
+	data: {},
+
+	// set the cart langauge 
+	// (may be used for checkout)
+	language: "english-uk",
+
+	// array of item fields that will not be 
+	// sent to checkout
+	excludeFromCheckout: [],
+
+	// custom function to add shipping cost
+	shippingCustom: null,
+
+	// flat rate shipping option
+	shippingFlatRate: 0,
+
+	// added shipping based on this value 
+	// multiplied by the cart quantity
+	shippingQuantityRate: 0,
+
+	// added shipping based on this value 
+	// multiplied by the cart subtotal
+	shippingTotalRate: 0,
+
+	// tax rate applied to cart subtotal
+	taxRate: 0,
+
+	// true if tax should be applied to shipping
+	taxShipping: false,
+            
+	// event callbacks 
+	beforeAdd			: null,
+	afterAdd			: null,
+	load				: null,
+	beforeSave		: null,
+	afterSave			: null,
+	update			: null,
+	ready			: null,
+	checkoutSuccess	: null,
+	checkoutFail		: null,
+	beforeCheckout		: null,
+        beforeRemove           : null
+});
+
 	</script>
 </body>
 </html>
